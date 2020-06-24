@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".DashboardActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grad_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/toolbartitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="E-UPS UNAS"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/linearlay1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:background="@color/grey_f1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_homepage"
+            android:layout_marginEnd="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#2672BD"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Welcome to E-UPS UNAS App"
+                android:textColor="#000"
+                android:textSize="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_above="@+id/bottom_nav"
+        android:id="@+id/scrollView1"
+        android:layout_below="@id/linearlay1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearlay2"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/twenty_dp"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:paddingStart="20dp"
+                android:background="@color/grey_f1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Informasi Pembayaran"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="#2672BD"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:textSize="13dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlay3"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/twenty_dp"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:paddingStart="20dp"
+                android:background="@color/grey_f1"
+                android:orientation="horizontal"
+                android:layout_below="@id/linearlay2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ambil No. Antrian"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="#2672BD"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/text0101"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:text="Fitur Ambil No. Antrian hanya diperuntukkan bagi User yang akan melakukan Verifikasi Pembayaran UPS melalui menu Verify Payment."
+                        android:textSize="13dp"/>
+
+                    <TextView
+                        android:id="@+id/text0102"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:text="Petunjuk Melakukan Verifikasi Pembayaran :"
+                        android:textSize="13dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:text="1. Setelah selesai melakukan pembayaran UPS, user perlu terlebih dahulu mengambil No. Antrian dengan mengisikan data pada kolom dibawah."
+                        android:textSize="13dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:text="2. Isi kolom dengan NPM dan Nama Lengkap Anda."
+                        android:textSize="13dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:text="3. Klik tombol Ambil Nomor, kemudian anda akan dialihkan ke halaman lain."
+                        android:textSize="13dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:text="4. Anda akan mendapatkan Nomor Antrian, mohon catat Nomor Antrian Anda."
+                        android:textSize="13dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:text="5. Setelah mendapat Nomor Antrian, Anda akan langsung dialihkan ke halaman Verify Menu untuk melakukan pengisian form verifikasi terkait transaksi pembayaran UPS Anda."
+                        android:textSize="13dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:text="6. Isi data pada form Verifikasi kemudian Submit."
+                        android:textSize="13dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:text="7. Setelah Submit, segera Admin akan melakukan konfirmasi terkait pembayaran Anda. Setelah selesai mengkonfirmasi dan verifikasi bukti pembayaran, Anda akan dikirimkan pesan via Email yang berisikan bahwa bukti pembayaran Anda sudah diverifikasi."
+                        android:textSize="13dp"/>
+
+                    <EditText
+                        android:id="@+id/nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:hint="Nama Lengkap"
+                        android:inputType="text"
+                        android:textSize="15dp"/>
+                    <EditText
+                        android:id="@+id/npm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:hint="NPM"
+                        android:inputType="text"
+                        android:textSize="15dp"/>
+                    <Button
+                        android:id="@+id/btnAmbil"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ambil Nomor"
+                        android:background="@drawable/circlebackground"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="#fff"
+        app:itemIconTint="#fff"
+        android:background="@drawable/grad_bg"
+        app:menu="@menu/bottom_navigation"/>
+</RelativeLayout>
